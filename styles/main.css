@@ -1,0 +1,364 @@
+/* Algemeen */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #373240;
+}
+
+img {
+  max-width: 80vw;
+  margin-top: 1em;
+}
+
+iframe {
+  max-width: 80vw;
+  margin-top: 1em;
+}
+
+/* ----- Typografieën */
+
+h1 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 42pt;
+  color: #1aafd3;
+  font-weight: 100;
+  line-height: 1em;
+}
+
+h2 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 18pt;
+  font-weight: 100;
+  margin-top: 30vh;
+}
+
+main article:first-of-type h2 {
+  margin-top: 0;
+}
+
+footer h2 {
+  margin-top: 0;
+}
+
+h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 12pt;
+  font-weight: 600;
+  margin-top: 2vh;
+}
+
+h4 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 18pt;
+  font-weight: 300;
+  color: #55b8ad;
+  transition: ease-in 0.3s;
+}
+
+p {
+  font-family: "Inter", sans-serif;
+  font-size: 12pt;
+  font-weight: 300;
+  margin-bottom: 2vh;
+}
+
+a {
+  font-family: "Inter", sans-serif;
+  color: rgb(60, 121, 235);
+  font-size: 12pt;
+  color: #1aafd3;
+  transition: ease-in 0.3s;
+}
+
+a:hover {
+  color: #ffca00;
+}
+
+a:active {
+  color: #d8ad03;
+}
+
+/* Header */
+
+header {
+  padding-top: 8vw;
+  margin: 0 8vw 0 8vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ----- Logo */
+
+header a:first-of-type {
+  z-index: 9999;
+}
+
+header a svg {
+  width: 61px;
+  height: 68px;
+}
+
+header a .logo {
+  fill: #1aafd3;
+  transition: ease-in 0.3s;
+}
+
+header a:hover .logo {
+  fill: #ffca00;
+}
+
+header a:active .logo {
+  fill: #d8ad03;
+}
+
+/* ----- Paginanummering */
+
+#paginanummer {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -100;
+}
+
+header div p {
+  font-family: "Inter";
+  font-size: 150pt;
+  font-weight: 400;
+  text-align: center;
+  background-color: #f1f1f1;
+  color: transparent;
+  text-shadow: 4px 5px 10px rgba(255, 255, 255, 1);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  animation: 1s ease-out paginanummeranimatie forwards;
+}
+
+@keyframes paginanummeranimatie {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ----- Navigatie */
+
+header nav {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 9998;
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: column;
+}
+
+header nav ul li {
+  list-style: none;
+}
+
+header nav a {
+  text-decoration: none;
+}
+
+/* ----- ----- Volgend werk */
+
+header nav ul li:first-of-type a h4 {
+  position: fixed;
+  bottom: 74px;
+  right: 50px;
+  color: white;
+}
+
+header nav ul li:first-of-type a svg {
+  position: fixed;
+  bottom: 66px;
+  right: 10px;
+  width: 129px;
+  height: 48px;
+  filter: drop-shadow(8px 8px 10px rgba(26, 175, 211, 0.6));
+  transition: ease-in 0.3s;
+}
+
+header nav ul li:first-of-type a:hover svg {
+  filter: drop-shadow(8px 8px 10px rgba(255, 202, 0, 0.4));
+}
+
+header nav ul li a .volgende {
+  fill: #1aafd3;
+  transition: ease-in 0.3s;
+}
+
+header nav ul li a:hover .volgende {
+  fill: #ffca00;
+}
+
+header nav ul li a:active .volgende {
+  fill: #d8ad03;
+}
+
+/* ----- ----- Vorig werk*/
+
+header nav ul li:last-of-type a h4 {
+  color: #1aafd3;
+  position: fixed;
+  bottom: 22px;
+  right: 96px;
+}
+
+header nav ul li:last-of-type a:hover h4 {
+  color: white;
+}
+
+header nav ul li:last-of-type a svg {
+  position: fixed;
+  bottom: 10px;
+  right: 50px;
+  width: 168px;
+  height: 48px;
+  filter: drop-shadow(8px 8px 10px rgb(177, 179, 182, 0.7));
+  transition: ease-in 0.3s;
+}
+
+header nav ul li:last-of-type a:hover svg {
+  filter: drop-shadow(8px 8px 10px rgba(255, 202, 0, 0.4));
+}
+
+header nav ul li a .vorige {
+  fill: #f1f3f6;
+  transition: ease-in 0.3s;
+}
+
+header nav ul li a:hover .vorige {
+  fill: #ffca00;
+}
+
+header nav ul li a:active .vorige {
+  fill: #d8ad03;
+}
+
+/* Main */
+
+main {
+  margin: 34vh 8vw 0 8vw;
+  z-index: 100;
+  animation: 1s ease-out tekstanimatie forwards;
+}
+
+@keyframes tekstanimatie {
+  0% {
+    opacity: 0;
+    transform: translateY(100vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer */
+
+footer {
+  margin: 0 8vw 0 8vw;
+  padding: 34vh 0 34vh 0;
+}
+
+footer ul li {
+  list-style: none;
+  margin: 1vh 0 3vh 0;
+}
+
+footer a {
+  margin-top: 50px;
+}
+
+/* Transitie */
+
+.displaynone {
+  display: none;
+}
+
+/* ----- Transitie volgende */
+
+.transitionVolgende .layer {
+  z-index: 9998;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /* background: #1aafd3; */
+  background: white;
+  animation: 0.3s ease-in slideLeft forwards;
+}
+
+@keyframes slideLeft {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+/* ----- Transitie vorige */
+
+.transitionVorige .layer {
+  z-index: 9998;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /* background: #1aafd3; */
+  background: white;
+  animation: 0.3s ease-in slideRight forwards;
+}
+
+@keyframes slideRight {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+/* ----- Transitie home */
+
+.transitionHome .layer {
+  z-index: 9998;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /* background: #1aafd3; */
+  background: white;
+  animation: 0.3s ease-in slideDown forwards;
+}
+
+@keyframes slideDown {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
