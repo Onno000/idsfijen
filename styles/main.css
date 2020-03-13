@@ -14,13 +14,17 @@ body {
 }
 
 img {
-  max-width: 80vw;
+  max-width: 82vw;
   margin-top: 1em;
+  max-height: 90vh;
+  transition: ease-in 0.3s;
 }
 
 iframe {
   max-width: 80vw;
   margin-top: 1em;
+  max-height: 90vh;
+  transition: ease-in 0.3s;
 }
 
 /* ----- Typografieën */
@@ -95,11 +99,12 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  transition: ease-in 0.3s;
 }
 
 /* ----- Logo */
 
-header a:first-of-type {
+header a {
   z-index: 9999;
 }
 
@@ -164,7 +169,7 @@ header nav {
   position: fixed;
   bottom: 0;
   right: 0;
-  z-index: 9998;
+  z-index: 9999;
 }
 
 header nav ul {
@@ -360,5 +365,117 @@ footer a {
   }
   to {
     left: 0;
+  }
+}
+
+/* Mediaquery 1 */
+
+@media only screen and (min-width: 600px) {
+  /* Algemeen */
+
+  img {
+    max-width: 64vw;
+    max-height: 90vh;
+  }
+
+  iframe {
+    max-width: 64vw;
+    max-height: 90vh;
+  }
+
+  /* Header */
+
+  header {
+    margin: 0 18vw 0 18vw;
+  }
+
+  /* ----- Header nav */
+
+  header nav ul li:first-of-type a h4 {
+    right: 180px;
+    bottom: 104px;
+  }
+
+  header nav ul li:first-of-type a svg {
+    right: 140px;
+    bottom: 96px;
+  }
+
+  header nav ul li:last-of-type a h4 {
+    right: 226px;
+    bottom: 52px;
+  }
+
+  header nav ul li:last-of-type a svg {
+    right: 180px;
+    bottom: 40px;
+  }
+
+  /* Main  */
+
+  main {
+    margin: 34vh 18vw 0 18vw;
+  }
+
+  /* Footer */
+
+  footer {
+    margin: 0 18vw 0 18vw;
+  }
+}
+
+/* Mediaquery 2 */
+
+@media only screen and (min-width: 1300px) {
+  /* Algemeen */
+
+  img {
+    max-width: 42vw;
+    max-height: 90vh;
+  }
+
+  iframe {
+    max-width: 42vw;
+    max-height: 90vh;
+  }
+
+  /* Header */
+
+  header {
+    margin: 0 18vw 0 18vw;
+  }
+
+  /* ----- Header nav */
+
+  header nav ul li:first-of-type a h4 {
+    right: 350px;
+    bottom: 104px;
+  }
+
+  header nav ul li:first-of-type a svg {
+    right: 310px;
+    bottom: 96px;
+  }
+
+  header nav ul li:last-of-type a h4 {
+    right: 396px;
+    bottom: 52px;
+  }
+
+  header nav ul li:last-of-type a svg {
+    right: 350px;
+    bottom: 40px;
+  }
+
+  /* Main  */
+
+  main {
+    margin: 34vh 40vw 0 18vw;
+  }
+
+  /* Footer */
+
+  footer {
+    margin: 0 40vw 0 18vw;
   }
 }
