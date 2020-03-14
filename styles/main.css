@@ -306,6 +306,11 @@ section #eerstewerk img {
   transform: scale(0.9);
 }
 
+main section ul li {
+  list-style: none;
+  margin: 1vh 0 3vh 0;
+}
+
 /* Footer */
 
 footer {
