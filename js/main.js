@@ -1,3 +1,35 @@
+// Verwijdende header
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollpos = window.pageYOffset;
+  if (this.prevScrollpos > currentScrollpos) {
+    document.querySelector("header").style.top = "0";
+  } else if (currentScrollpos == 0) {
+    document.querySelector("header").style.top = "0px";
+  } else {
+    document.querySelector("header").style.top = "-200px";
+  }
+  this.prevScrollpos = currentScrollpos;
+};
+
+// Scroll vertoning
+
+// var sections = document.querySelectorAll("section");
+// var viewHeight = window.innerHeight;
+
+// var revealSection = () => {
+//   sections.forEach(section => {
+//     var distanceFromTop = section.getBoundingClientRect().top;
+//     distanceFromTop < viewHeight + 300
+//       ? section.classList.add("scroll-reveal")
+//       : section.classList.remove("scroll-reveal");
+//   });
+// };
+
+// window.addEventListener("load", () => revealSection());
+// window.addEventListener("scroll", () => revealSection());
+
 // Pagina transitie volgende
 
 var transitionVolgende = document.querySelector(".transitionVolgende");
